@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Factoriel</title>
+</head>
+<body>
+    <div style="text-align: center; color: darkred; background-color: darkgoldenrod; font-family: 'Indie Flower', cursive; font-size: 120px; ">
+        Take your factoriel!
+    </div>
+    <div style="margin-top: 20px; text-align: center; color: darkred; background-color: goldenrod; font-family: 'Indie Flower', cursive; font-size: 40px;">
+            Chose your number for making factorial :<br>
+            <input type="text" id="number">
+            <button style="font-family: 'Indie Flower', cursive;" type="button" onclick="showFactorial()">Calculate! </button>
+    </div>
+    <p style="text-align: center; color: darkred; font-family: 'Indie Flower', cursive; font-size: 80px;"id="show_number"></p>
+    <script>
+        function showFactorial() {
+
+            var number, factorial, i;
+
+            number= document.getElementById("number").value;
+            number=parseInt(number);
+            factorial = 1;
+            if (number !== 0){
+                for (i = number; i >= 1; i--) {
+                    factorial = factorial * i;
+                }
+            }
+            else {
+                factorial = 1;
+            }
+
+            if (factorial !== 0) {
+                document.getElementById("show_number").innerHTML = 'The factorial of your number is: ' + factorial;
+            }
+        }
+
+
+    </script>
+</body>
+</html>
